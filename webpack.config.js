@@ -162,7 +162,7 @@ module.exports = function () {
 
             {
                 test: /\.jsx?$/i,
-                exclude: /node_modules\/(?!query-string)/,
+                exclude: /node_modules/,
                 loader: 'babel-loader',
                 query: {
                     cacheDirectory: true
@@ -195,6 +195,10 @@ module.exports = function () {
                 'img': path.join(__dirname, 'img'),
                 ...alias
             }
+        },
+
+        devServer: {
+            historyApiFallback: true
         }
     };
 };
