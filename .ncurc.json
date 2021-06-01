@@ -1,0 +1,13 @@
+{
+    "upgrade": true,
+    "reject": [
+        "compression-webpack-plugin",
+        "copy-webpack-plugin",
+        "history",
+        "html-webpack-plugin",
+        "rxjs",
+        "terser-webpack-plugin",
+        "webpack",
+        "webpack-cli"
+    ]
+}
