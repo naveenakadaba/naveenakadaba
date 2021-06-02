@@ -18,7 +18,7 @@ render(
         Error404Page={() => <Fragment />}
         Error500Page={() => <Fragment />}>
         <Switch>
-            <Route path="/home" exact={true} render={(props) => (
+            <Route path="/" exact={true} render={(props) => (
                 <DefaultPageTemplate>
                     <Home {...props} />
                 </DefaultPageTemplate>

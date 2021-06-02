@@ -1,4 +1,9 @@
-import React, { Fragment, useState } from 'react';
+import React, {
+    Fragment,
+    useState,
+    Children,
+    cloneElement
+} from 'react';
 import PropTypes from 'prop-types';
 import Container from '@obstas-ui/container';
 import Card from '@obstas-ui/card';
@@ -16,7 +21,7 @@ import facebookIcon from 'img/icons/facebook.svg';
 
 const DefaultPageTemplate = (props) => {
     const { children } = props;
-    const [activeTab, setActiveTab] = useState('home');
+    const [activeTab, setActiveTab] = useState('about');
 
     return (
         <Fragment>
@@ -165,13 +170,13 @@ const DefaultPageTemplate = (props) => {
                         <Spacer bottom={2}>
                             <Tabs>
                                 <Tab
-                                    active={activeTab === 'home'}
-                                    title="Home"
+                                    active={activeTab === 'about'}
+                                    title="About"
                                     onClick={(event) => {
                                         event.preventDefault();
-                                        setActiveTab('home');
+                                        setActiveTab('about');
                                     }}>
-                                    Home
+                                    About
                                 </Tab>
 
                                 <Tab
@@ -216,7 +221,12 @@ const DefaultPageTemplate = (props) => {
                             </Tabs>
                         </Spacer>
 
-                        {children}
+                        {Children.map(children, (child, index) => {
+                            return cloneElement(child, {
+                                key: index,
+                                activeTab
+                            });
+                        })}
                     </Card>
                 </Spacer>
             </Container>
