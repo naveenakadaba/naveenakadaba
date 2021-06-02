@@ -6,9 +6,13 @@ import Spacer from '@obstas-ui/spacer';
 import Flex, { FlexItem } from '@obstas-ui/flex';
 import Text from '@obstas-ui/text';
 import Tabs, { Tab } from '@obstas-ui/tabs';
+import Link from '@obstas-ui/link';
 import Background from 'src/page-template/background/index.jsx';
 import backgroundImage from 'img/page-template/default/background.jpg';
 import naveenakadabaImage from 'img/naveenakadaba.jpg';
+import githubIcon from 'img/icons/github.svg';
+import linkedinIcon from 'img/icons/linkedin.svg';
+import facebookIcon from 'img/icons/facebook.svg';
 
 const DefaultPageTemplate = (props) => {
     const { children } = props;
@@ -89,9 +93,58 @@ const DefaultPageTemplate = (props) => {
                                             </Text>
                                         </Text>
 
-                                        <Text as="p" size={1} spacing={{ bottom: 0 }}>
+                                        <Text as="p" size={1} spacing={{ bottom: 2 }}>
                                             I am a JavaScript Developer based in Bangalore, India.
                                         </Text>
+
+                                        <Flex
+                                            alignItems="center"
+                                            wrap="nowrap"
+                                            itemSpacing={{
+                                                right: 1.5
+                                            }}>
+                                            <FlexItem>
+                                                <Link
+                                                    href="https://github.com/naveenakadaba"
+                                                    title="Github"
+                                                    target="_blank">
+                                                    <img
+                                                        alt="Github"
+                                                        src={githubIcon}
+                                                        height="32px"
+                                                        width="32px"
+                                                    />
+                                                </Link>
+                                            </FlexItem>
+
+                                            <FlexItem>
+                                                <Link
+                                                    href="https://www.linkedin.com/in/naveenakadaba"
+                                                    title="LinkedIn"
+                                                    target="_blank">
+                                                    <img
+                                                        alt="LinkedIn"
+                                                        src={linkedinIcon}
+                                                        height="32px"
+                                                        width="32px"
+                                                    />
+                                                </Link>
+                                            </FlexItem>
+
+                                            <FlexItem spacing={{ right: 0 }}>
+                                                <Link
+                                                    href="https://www.facebook.com/naveena.kadaba/"
+                                                    title="Facebook"
+                                                    target="_blank">
+                                                    <img
+                                                        alt="Facebook"
+                                                        src={facebookIcon}
+                                                        height="32px"
+                                                        width="32px"
+                                                    />
+                                                </Link>
+                                            </FlexItem>
+                                        </Flex>
                                     </Spacer>
                                 </FlexItem>
                             </Flex>
