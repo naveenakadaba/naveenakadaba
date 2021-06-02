@@ -13,11 +13,26 @@ import lernaIcon from 'img/icons/lerna.svg';
 import webpackIcon from 'img/icons/webpack.svg';
 import reduxIcon from 'img/icons/redux.svg';
 
+const ImageWrap = (props) => {
+    return (
+        <div
+            style={{
+                alignItems: 'center',
+                display: 'flex',
+                flexWrap: 'nowrap',
+                height: '128px',
+                width: '128px'
+            }}
+            {...props}
+        />
+    );
+};
+
 const Skills = () => {
     return (
         <div style={{ ...margin({ bottom: -1 }) }}>
             <Flex
-                alignItems="flex-end"
+                alignItems="center"
                 justifyContent="center"
                 wrap="wrap"
                 itemSpacing={{
@@ -27,12 +42,14 @@ const Skills = () => {
                 }}>
                 <FlexItem>
                     <Spacer bottom={1}>
-                        <img
-                            alt="React"
-                            src={reactIcon}
-                            height="auto"
-                            width="128px"
-                        />
+                        <ImageWrap>
+                            <img
+                                alt="React"
+                                src={reactIcon}
+                                height="auto"
+                                width="100%"
+                            />
+                        </ImageWrap>
                     </Spacer>
 
                     <Text align="center">React</Text>
@@ -40,12 +57,14 @@ const Skills = () => {
 
                 <FlexItem>
                     <Spacer bottom={1}>
-                        <img
-                            alt="Node JS"
-                            src={nodejsIcon}
-                            height="auto"
-                            width="128px"
-                        />
+                        <ImageWrap>
+                            <img
+                                alt="Node JS"
+                                src={nodejsIcon}
+                                height="auto"
+                                width="100%"
+                            />
+                        </ImageWrap>
                     </Spacer>
 
                     <Text align="center">Node JS</Text>
@@ -53,12 +72,14 @@ const Skills = () => {
 
                 <FlexItem>
                     <Spacer bottom={1}>
-                        <img
-                            alt="Mongo DB"
-                            src={mongodbIcon}
-                            height="auto"
-                            width="128px"
-                        />
+                        <ImageWrap>
+                            <img
+                                alt="Mongo DB"
+                                src={mongodbIcon}
+                                height="auto"
+                                width="100%"
+                            />
+                        </ImageWrap>
                     </Spacer>
 
                     <Text align="center">Mongo DB</Text>
@@ -66,12 +87,14 @@ const Skills = () => {
 
                 <FlexItem>
                     <Spacer bottom={1}>
-                        <img
-                            alt="Redis"
-                            src={redisIcon}
-                            height="auto"
-                            width="128px"
-                        />
+                        <ImageWrap>
+                            <img
+                                alt="Redis"
+                                src={redisIcon}
+                                height="auto"
+                                width="100%"
+                            />
+                        </ImageWrap>
                     </Spacer>
 
                     <Text align="center">Redis</Text>
@@ -79,12 +102,14 @@ const Skills = () => {
 
                 <FlexItem>
                     <Spacer bottom={1}>
-                        <img
-                            alt="Rabbitmq"
-                            src={rabbitmqIcon}
-                            height="auto"
-                            width="128px"
-                        />
+                        <ImageWrap>
+                            <img
+                                alt="Rabbitmq"
+                                src={rabbitmqIcon}
+                                height="auto"
+                                width="100%"
+                            />
+                        </ImageWrap>
                     </Spacer>
 
                     <Text align="center">Rabbitmq</Text>
@@ -92,12 +117,14 @@ const Skills = () => {
 
                 <FlexItem>
                     <Spacer bottom={1}>
-                        <img
-                            alt="HAProxy"
-                            src={haproxyIcon}
-                            height="auto"
-                            width="128px"
-                        />
+                        <ImageWrap>
+                            <img
+                                alt="HAProxy"
+                                src={haproxyIcon}
+                                height="auto"
+                                width="100%"
+                            />
+                        </ImageWrap>
                     </Spacer>
 
                     <Text align="center">HAProxy</Text>
@@ -105,12 +132,14 @@ const Skills = () => {
 
                 <FlexItem>
                     <Spacer bottom={1}>
-                        <img
-                            alt="Lerna"
-                            src={lernaIcon}
-                            height="auto"
-                            width="128px"
-                        />
+                        <ImageWrap>
+                            <img
+                                alt="Lerna"
+                                src={lernaIcon}
+                                height="auto"
+                                width="100%"
+                            />
+                        </ImageWrap>
                     </Spacer>
 
                     <Text align="center">Lerna</Text>
@@ -118,12 +147,14 @@ const Skills = () => {
 
                 <FlexItem>
                     <Spacer bottom={1}>
-                        <img
-                            alt="Webpack"
-                            src={webpackIcon}
-                            height="auto"
-                            width="128px"
-                        />
+                        <ImageWrap>
+                            <img
+                                alt="Webpack"
+                                src={webpackIcon}
+                                height="auto"
+                                width="100%"
+                            />
+                        </ImageWrap>
                     </Spacer>
 
                     <Text align="center">Webpack</Text>
@@ -131,12 +162,14 @@ const Skills = () => {
 
                 <FlexItem>
                     <Spacer bottom={1}>
-                        <img
-                            alt="Redux"
-                            src={reduxIcon}
-                            height="auto"
-                            width="128px"
-                        />
+                        <ImageWrap>
+                            <img
+                                alt="Redux"
+                                src={reduxIcon}
+                                height="auto"
+                                width="100%"
+                            />
+                        </ImageWrap>
                     </Spacer>
 
                     <Text align="center">Redux</Text>
