@@ -1,23 +1,14 @@
 import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
-import { createGlobalStyle } from 'styled-components';
-import { theme } from '@obstas-ui/theme';
 import Container from '@obstas-ui/container';
 import Card from '@obstas-ui/card';
 import Spacer from '@obstas-ui/spacer';
 import Flex, { FlexItem } from '@obstas-ui/flex';
 import Text from '@obstas-ui/text';
 import Tabs, { Tab } from '@obstas-ui/tabs';
+import Background from 'src/page-template/background/index.jsx';
 import backgroundImage from 'img/page-template/default/background.jpg';
 import naveenakadabaImage from 'img/naveenakadaba.jpg';
-
-const GlobalStyles = createGlobalStyle`
-    body {
-        background-color: ${theme.colors.accent.accent3};
-        background-image: url(${backgroundImage});
-        background-size: cover;
-    }
-`;
 
 const DefaultPageTemplate = (props) => {
     const { children } = props;
@@ -25,9 +16,16 @@ const DefaultPageTemplate = (props) => {
 
     return (
         <Fragment>
-            <GlobalStyles />
+            <Background
+                backgroundColor="#0b0f58"
+                backgroundImage={backgroundImage}
+            />
 
             <Container
+                style={{
+                    position: 'relative',
+                    zIndex: 2
+                }}
                 spacing={{ top: 3, bottom: 3 }}
                 width="80%"
                 sm={{ width: '480px' }}
@@ -124,22 +122,42 @@ const DefaultPageTemplate = (props) => {
                                 </Tab>
 
                                 <Tab
-                                    title="Skills">
+                                    active={activeTab === 'skills'}
+                                    title="Skills"
+                                    onClick={(event) => {
+                                        event.preventDefault();
+                                        setActiveTab('skills');
+                                    }}>
                                     Skills
                                 </Tab>
 
                                 <Tab
-                                    title="Work experience">
+                                    active={activeTab === 'workExperience'}
+                                    title="Work experience"
+                                    onClick={(event) => {
+                                        event.preventDefault();
+                                        setActiveTab('workExperience');
+                                    }}>
                                     Work experience
                                 </Tab>
 
                                 <Tab
-                                    title="Contributions">
+                                    active={activeTab === 'contributions'}
+                                    title="Contributions"
+                                    onClick={(event) => {
+                                        event.preventDefault();
+                                        setActiveTab('contributions');
+                                    }}>
                                     Contributions
                                 </Tab>
 
                                 <Tab
-                                    title="Let's talk">
+                                    active={activeTab === 'contact'}
+                                    title="Let's talk"
+                                    onClick={(event) => {
+                                        event.preventDefault();
+                                        setActiveTab('contact');
+                                    }}>
                                     {'Let\'s talk'}
                                 </Tab>
                             </Tabs>
