@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Home = (props) => {
+const Home = () => {
     return (
-        <div {...props} style={{ height: '1200px' }}>
+        <div>
         </div>
     );
 };
