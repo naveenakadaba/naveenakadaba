@@ -55,8 +55,7 @@ const Contact = () => {
             <Text as="p">
                 <Text
                     inline={true}
-                    weight="bold"
-                    spacing={{ bottom: 0.5 }}>
+                    weight="bold">
                     Note:
                 </Text> {'Please don\'t contact me if you are looking for a person with strong data structure knowledge. I don\'t get to work on it often.'}
             </Text>
