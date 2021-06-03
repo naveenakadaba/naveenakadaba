@@ -36,7 +36,7 @@ const DefaultPageTemplate = (props) => {
                     zIndex: 2
                 }}
                 spacing={{ top: 3, bottom: 3 }}
-                width="80%"
+                width="100%"
                 sm={{ width: '480px' }}
                 md={{ width: '576px' }}
                 lg={{ width: '800px' }}
