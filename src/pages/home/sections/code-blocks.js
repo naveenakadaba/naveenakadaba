@@ -51,3 +51,37 @@ export const asyncComponent = `
         </PreLoginFormTemplate>
     )} />
 `;
+
+export const dispatchAction = `
+    import { store } from '@obstas-ui/core';
+        
+    store.dispatch({
+        type: actionTypes.SIGNIN,
+        payload: {
+            body: {
+                email: 'email',
+                password: 'password'
+            }
+        }
+    });
+`;
+
+export const spacer = `
+    import Spacer from '@obstas-ui/spacer';
+
+    //Margin bottom = 1rem
+    <Spacer bottom={1}>
+        <span>Spacer</span>
+    </Spacer>
+
+    //Margin bottom = 1rem when screen size is below lg 
+    //Margin bottom = 2rem when screen size is above lg
+    <Spacer bottom={1} lg={{ bottom: 2 }}>
+        <span>Spacer</span>
+    </Spacer>
+
+    //Padding bottom = 1rem
+    <Spacer type="padding" bottom={1}>
+        <span>Spacer</span>
+    </Spacer>
+`;
