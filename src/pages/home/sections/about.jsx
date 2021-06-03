@@ -1,13 +1,14 @@
 import React from 'react';
+import Text from '@obstas-ui/text';
 
 const About = () => {
     return (
         <div>
-            <p>{'I live in Bangalore, India working full time as a JavaScript developer. I\'ve been building stuff on the web for the last 8 years, working with multiple organizations.'}</p>
+            <Text as="p">{'I live in Bangalore, India working full time as a JavaScript developer. I\'ve been building stuff on the web for the last 8 years, working with multiple organizations.'}</Text>
 
-            <p>{'I like to code things from scratch, and enjoy bringing ideas to life in the browser. I absolutely love learning new things and taking on new challenges.'}</p>
+            <Text as="p">{'I like to code things from scratch, and enjoy bringing ideas to life in the browser. I absolutely love learning new things and taking on new challenges.'}</Text>
 
-            <p>{'I believe in quality not in quantity.'}</p>
+            <Text as="p" spacing={{ bottom: 0 }}>{'I believe in quality not in quantity.'}</Text>
         </div>
     );
 };

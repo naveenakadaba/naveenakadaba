@@ -52,7 +52,7 @@ const Contact = () => {
                 </Flex>
             </Spacer>
 
-            <Text as="p">
+            <Text as="p" spacing={{ bottom: 0 }}>
                 <Text
                     inline={true}
                     weight="bold">

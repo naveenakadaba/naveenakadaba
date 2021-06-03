@@ -24,7 +24,7 @@ const Contributions = () => {
                         OneCEC Juvo
                     </Text>
 
-                    <Text as="p">Manage Tesco customer orders</Text>
+                    <Text as="p" spacing={{ bottom: 0 }}>Manage Tesco customer orders</Text>
                 </FlexItem>
             </Flex>
         </div>
