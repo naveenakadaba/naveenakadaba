@@ -14,7 +14,7 @@ const Contributions = () => {
                         OneCEC Clubcard
                     </Text>
 
-                    <Text as="p">Manage customer clubcard data</Text>
+                    <Text as="p">Manage Tesco customer clubcard data</Text>
 
                     <Divider spacing={{ bottom: 1 }} />
                 </FlexItem>
@@ -24,7 +24,7 @@ const Contributions = () => {
                         OneCEC Juvo
                     </Text>
 
-                    <Text as="p">Manage customer orders</Text>
+                    <Text as="p">Manage Tesco customer orders</Text>
                 </FlexItem>
             </Flex>
         </div>

@@ -28,7 +28,7 @@ const Crafts = () => {
             </Text>
 
             <Text as="p" spacing={{ bottom: 2 }}>
-                {'This framework makes the life easier. Let\'s look at some of the code snippets:'}
+                {'This framework makes the frontend development easier. Let\'s look at some of the code snippets:'}
             </Text>
 
             <Text as="p" weight="bold" spacing={{ bottom: 0.5 }}>
