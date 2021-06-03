@@ -14,6 +14,16 @@ const WorkExperience = asyncComponent({
     fallback: () => <SectionPlaceholder height="320px" />
 });
 
+const Contact = asyncComponent({
+    component: () => import('src/pages/home/sections/contact.jsx'),
+    fallback: () => <SectionPlaceholder height="320px" />
+});
+
+const Contributions = asyncComponent({
+    component: () => import('src/pages/home/sections/contributions.jsx'),
+    fallback: () => <SectionPlaceholder height="320px" />
+});
+
 const Home = (props) => {
     const { activeTab } = props;
 
@@ -29,6 +39,14 @@ const Home = (props) => {
 
             {activeTab === 'workExperience' && (
                 <WorkExperience {...props} />
+            )}
+
+            {activeTab === 'contributions' && (
+                <Contributions {...props} />
+            )}
+
+            {activeTab === 'contact' && (
+                <Contact {...props} />
             )}
         </Fragment>
     );
