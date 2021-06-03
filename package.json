@@ -51,6 +51,7 @@
     "@obstas-ui/card": "^1.0.0",
     "@obstas-ui/container": "^1.0.0",
     "@obstas-ui/core": "^1.0.0",
+    "@obstas-ui/divider": "^1.0.0",
     "@obstas-ui/dropdown": "^1.0.0",
     "@obstas-ui/flex": "^1.0.0",
     "@obstas-ui/icons": "^1.0.0",
