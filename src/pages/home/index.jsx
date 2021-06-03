@@ -9,6 +9,11 @@ const Skills = asyncComponent({
     fallback: () => <SectionPlaceholder height="320px" />
 });
 
+const WorkExperience = asyncComponent({
+    component: () => import('src/pages/home/sections/work-experience.jsx'),
+    fallback: () => <SectionPlaceholder height="320px" />
+});
+
 const Home = (props) => {
     const { activeTab } = props;
 
@@ -20,6 +25,10 @@ const Home = (props) => {
 
             {activeTab === 'skills' && (
                 <Skills {...props} />
+            )}
+
+            {activeTab === 'workExperience' && (
+                <WorkExperience {...props} />
             )}
         </Fragment>
     );

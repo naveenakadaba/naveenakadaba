@@ -12,6 +12,7 @@ import haproxyIcon from 'img/icons/haproxy.svg';
 import lernaIcon from 'img/icons/lerna.svg';
 import webpackIcon from 'img/icons/webpack.svg';
 import reduxIcon from 'img/icons/redux.svg';
+import rxjsIcon from 'img/icons/rxjs.svg';
 
 const ImageWrap = (props) => {
     return (
@@ -173,6 +174,21 @@ const Skills = () => {
                     </Spacer>
 
                     <Text align="center">Redux</Text>
+                </FlexItem>
+
+                <FlexItem>
+                    <Spacer bottom={1}>
+                        <ImageWrap>
+                            <img
+                                alt="Rx JS"
+                                src={rxjsIcon}
+                                height="auto"
+                                width="100%"
+                            />
+                        </ImageWrap>
+                    </Spacer>
+
+                    <Text align="center">Rx JS</Text>
                 </FlexItem>
             </Flex>
         </div>
