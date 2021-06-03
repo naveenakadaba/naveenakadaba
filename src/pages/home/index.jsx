@@ -4,29 +4,29 @@ import asyncComponent from '@obstas-ui/async-component';
 import { Section as SectionPlaceholder } from '@obstas-ui/placeholders';
 import About from 'src/pages/home/sections/about.jsx';
 
+const Crafts = asyncComponent({
+    component: () => import('src/pages/home/sections/crafts/index.jsx'),
+    fallback: () => <SectionPlaceholder height="640px" />
+});
+
 const Skills = asyncComponent({
     component: () => import('src/pages/home/sections/skills.jsx'),
-    fallback: () => <SectionPlaceholder height="320px" />
+    fallback: () => <SectionPlaceholder height="480px" />
 });
 
 const WorkExperience = asyncComponent({
     component: () => import('src/pages/home/sections/work-experience.jsx'),
-    fallback: () => <SectionPlaceholder height="320px" />
+    fallback: () => <SectionPlaceholder height="240px" />
 });
 
 const Contact = asyncComponent({
     component: () => import('src/pages/home/sections/contact.jsx'),
-    fallback: () => <SectionPlaceholder height="320px" />
+    fallback: () => <SectionPlaceholder height="200px" />
 });
 
 const Contributions = asyncComponent({
     component: () => import('src/pages/home/sections/contributions.jsx'),
-    fallback: () => <SectionPlaceholder height="320px" />
-});
-
-const Crafts = asyncComponent({
-    component: () => import('src/pages/home/sections/crafts/index.jsx'),
-    fallback: () => <SectionPlaceholder height="320px" />
+    fallback: () => <SectionPlaceholder height="160px" />
 });
 
 const Home = (props) => {
