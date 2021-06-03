@@ -85,3 +85,45 @@ export const spacer = `
         <span>Spacer</span>
     </Spacer>
 `;
+
+export const text = `
+    import Text from '@obstas-ui/text';
+
+    //Size is calculated based on MajorThird modular scale
+    //Size = 1 = modularScale(1, '1rem', 'majorThird')
+    //Size = 2 = modularScale(2, '1rem', 'majorThird')
+    <Text
+        size={1}
+        weight="bold"
+        italic={true}
+        inline={false}
+    />
+`;
+
+export const flex = `
+    import Flex, { FlexItem } from '@obstas-ui/flex';
+    
+    //Horizontal
+    //Spacing = Margin added around flex container
+    //Item Spacing = Margin added around flex items
+    //Remove all the margins when screen size is above lg
+    <Flex
+        alignItems="center"
+        wrap="nowrap"
+        spacing={{ bottom: 1 }}
+        itemSpacing={{ bottom: 1 }}
+        lg={{
+            spacing: { bottom: 0 },
+            itemSpacing: { bottom: 0 }
+        }}>
+        <FlexItem>FlexItem 1</FlexItem>
+        <FlexItem>FlexItem 2</FlexItem>
+    </Flex>
+
+    //Vertical
+    <Flex
+        direction="column">
+        <FlexItem>FlexItem 1</FlexItem>
+        <FlexItem>FlexItem 2</FlexItem>
+    </Flex>
+`;

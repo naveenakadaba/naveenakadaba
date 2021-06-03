@@ -25,7 +25,7 @@ const Contributions = asyncComponent({
 });
 
 const Crafts = asyncComponent({
-    component: () => import('src/pages/home/sections/crafts.jsx'),
+    component: () => import('src/pages/home/sections/crafts/index.jsx'),
     fallback: () => <SectionPlaceholder height="320px" />
 });
 

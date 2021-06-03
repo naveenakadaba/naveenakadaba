@@ -9,8 +9,10 @@ import {
     createReducer as createReducerCodeBlock,
     asyncComponent as asyncComponentCodeBlock,
     dispatchAction as dispatchActionCodeBlock,
-    spacer as spacerCodeBlock
-} from 'src/pages/home/sections/code-blocks.js';
+    spacer as spacerCodeBlock,
+    text as textCodeBlock,
+    flex as flexCodeBlock
+} from 'src/pages/home/sections/crafts/code-blocks.js';
 
 SyntaxHighlighter.registerLanguage('javascript', js);
 
@@ -78,6 +80,24 @@ const Crafts = () => {
                     {spacerCodeBlock}
                 </SyntaxHighlighter>
             </Spacer>
+
+            <Text as="p" weight="bold" spacing={{ bottom: 0.5 }}>
+                {'Text component:'}
+            </Text>
+
+            <Spacer bottom={2}>
+                <SyntaxHighlighter language="javascript" style={docco}>
+                    {textCodeBlock}
+                </SyntaxHighlighter>
+            </Spacer>
+
+            <Text as="p" weight="bold" spacing={{ bottom: 0.5 }}>
+                {'Flex component:'}
+            </Text>
+
+            <SyntaxHighlighter language="javascript" style={docco}>
+                {flexCodeBlock}
+            </SyntaxHighlighter>
         </div>
     );
 };
