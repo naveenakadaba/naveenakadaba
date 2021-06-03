@@ -180,6 +180,16 @@ const DefaultPageTemplate = (props) => {
                                 </Tab>
 
                                 <Tab
+                                    active={activeTab === 'crafts'}
+                                    title="Crafts"
+                                    onClick={(event) => {
+                                        event.preventDefault();
+                                        setActiveTab('crafts');
+                                    }}>
+                                    Crafts
+                                </Tab>
+
+                                <Tab
                                     active={activeTab === 'skills'}
                                     title="Skills"
                                     onClick={(event) => {

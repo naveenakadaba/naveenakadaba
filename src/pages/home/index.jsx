@@ -24,6 +24,11 @@ const Contributions = asyncComponent({
     fallback: () => <SectionPlaceholder height="320px" />
 });
 
+const Crafts = asyncComponent({
+    component: () => import('src/pages/home/sections/crafts.jsx'),
+    fallback: () => <SectionPlaceholder height="320px" />
+});
+
 const Home = (props) => {
     const { activeTab } = props;
 
@@ -31,6 +36,10 @@ const Home = (props) => {
         <Fragment>
             {activeTab === 'about' && (
                 <About {...props} />
+            )}
+
+            {activeTab === 'crafts' && (
+                <Crafts {...props} />
             )}
 
             {activeTab === 'skills' && (
