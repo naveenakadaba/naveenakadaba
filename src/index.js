@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import { App, Error404Redirect } from '@obstas-ui/core';
 import asyncComponent from '@obstas-ui/async-component';
 import { Page as PagePlaceholder } from '@obstas-ui/placeholders';
-import DefaultPageTemplate from 'src/page-template/index.jsx';
+import DefaultPageTemplate from 'src/page-templates/default/index.jsx';
 
 const Home = asyncComponent({
     component: () => import('src/pages/home/index.jsx'),
