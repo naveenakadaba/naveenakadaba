@@ -46,8 +46,8 @@ const plugins = [
 
     new CopyWebpackPlugin({
         patterns: [{
-            from: 'img/favicon.png',
-            to: 'img/favicon.png'
+            from: 'public/img/favicon.png',
+            to: 'public/img/favicon.png'
         }]
     })
 ];
@@ -110,7 +110,7 @@ switch (mode) {
 
 plugins.push(
     new HtmlWebpackPlugin({
-        template: path.join(__dirname, 'src/index.html'),
+        template: path.join(__dirname, 'public/index.html'),
         filename: 'index.html',
         inject: 'body',
         minify: false,
@@ -162,7 +162,7 @@ module.exports = function () {
 
             {
                 test: /\.jsx?$/i,
-                exclude: /node_modules\/(?!query-string)/,
+                exclude: /node_modules/,
                 loader: 'babel-loader',
                 query: {
                     cacheDirectory: true
@@ -192,9 +192,13 @@ module.exports = function () {
             ],
             alias: {
                 'src': path.join(__dirname, 'src'),
-                'img': path.join(__dirname, 'img'),
+                'img': path.join(__dirname, 'public/img'),
                 ...alias
             }
+        },
+
+        devServer: {
+            historyApiFallback: true
         }
     };
 };
