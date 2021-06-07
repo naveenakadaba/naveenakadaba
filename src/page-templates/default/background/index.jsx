@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { generateStyles } from 'src/page-template/background/styles';
+import { generateStyles } from 'src/page-templates/default/background/styles';
 
 const Background = (props) => {
     const {
