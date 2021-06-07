@@ -47,6 +47,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@obstas-ui/action-types": "^1.0.0",
     "@obstas-ui/async-component": "^1.0.0",
     "@obstas-ui/card": "^1.0.0",
     "@obstas-ui/container": "^1.0.0",
