@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/naveenakadaba/naveenakadaba/issues"
   },
-  "homepage": "https://github.com/naveenakadaba/naveenakadaba/tree/master/packages/client#readme",
+  "homepage": "https://github.com/naveenakadaba/naveenakadaba/tree/master#readme",
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
