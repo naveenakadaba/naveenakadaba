@@ -6,10 +6,6 @@ import Divider from '@obstas-ui/divider';
 const Contributions = () => {
     return (
         <div>
-            <Text as="h6">
-                {'What I\'m working on?'}
-            </Text>
-
             <Flex
                 direction="column"
                 wrap="nowrap">
@@ -30,11 +26,19 @@ const Contributions = () => {
                         {'OneCEC Juvo'}
                     </Text>
 
-                    <Text as="p" spacing={{ bottom: 0 }}>
+                    <Text as="p" spacing={{ bottom: 1 }}>
                         {'Manage Tesco customer orders'}
                     </Text>
                 </FlexItem>
             </Flex>
+
+            <Text as="p" spacing={{ bottom: 0 }}>
+                <Text
+                    inline={true}
+                    weight="bold">
+                    {'Note:'}
+                </Text> {'Only recent contributions are listed here.'}
+            </Text>
         </div>
     );
 };
