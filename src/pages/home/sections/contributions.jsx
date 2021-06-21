@@ -6,25 +6,33 @@ import Divider from '@obstas-ui/divider';
 const Contributions = () => {
     return (
         <div>
+            <Text as="h6">
+                {'What I\'m working on?'}
+            </Text>
+
             <Flex
                 direction="column"
                 wrap="nowrap">
                 <FlexItem width="100%">
                     <Text weight="bold" spacing={{ bottom: 0.5 }}>
-                        OneCEC Clubcard
+                        {'OneCEC Clubcard'}
                     </Text>
 
-                    <Text as="p">Manage Tesco customer clubcard data</Text>
+                    <Text as="p">
+                        {'Manage Tesco customer clubcard data'}
+                    </Text>
 
                     <Divider spacing={{ bottom: 1 }} />
                 </FlexItem>
 
                 <FlexItem width="100%">
                     <Text weight="bold" spacing={{ bottom: 0.5 }}>
-                        OneCEC Juvo
+                        {'OneCEC Juvo'}
                     </Text>
 
-                    <Text as="p" spacing={{ bottom: 0 }}>Manage Tesco customer orders</Text>
+                    <Text as="p" spacing={{ bottom: 0 }}>
+                        {'Manage Tesco customer orders'}
+                    </Text>
                 </FlexItem>
             </Flex>
         </div>

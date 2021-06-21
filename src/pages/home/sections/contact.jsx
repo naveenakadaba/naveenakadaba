@@ -27,7 +27,7 @@ const Contact = () => {
                     </FlexItem>
 
                     <FlexItem>
-                        +91-9482343699
+                        {'+91-9482343699'}
                     </FlexItem>
                 </Flex>
             </Spacer>
@@ -47,7 +47,7 @@ const Contact = () => {
                     </FlexItem>
 
                     <FlexItem>
-                        naveenakadaba@gmail.com
+                        {'naveenakadaba@gmail.com'}
                     </FlexItem>
                 </Flex>
             </Spacer>
@@ -56,7 +56,7 @@ const Contact = () => {
                 <Text
                     inline={true}
                     weight="bold">
-                    Note:
+                    {'Note:'}
                 </Text> {'Please don\'t contact me if you are looking for a person with strong data structure knowledge. I don\'t get to work on it often.'}
             </Text>
         </div>

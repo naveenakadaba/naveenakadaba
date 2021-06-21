@@ -2,7 +2,11 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import asyncComponent from '@obstas-ui/async-component';
 import { Section as SectionPlaceholder } from '@obstas-ui/placeholders';
-import About from 'src/pages/home/sections/about.jsx';
+
+const About = asyncComponent({
+    component: () => import('src/pages/home/sections/about.jsx'),
+    fallback: () => <SectionPlaceholder height="240px" />
+});
 
 const Crafts = asyncComponent({
     component: () => import('src/pages/home/sections/crafts/index.jsx'),

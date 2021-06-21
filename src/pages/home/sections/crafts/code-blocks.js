@@ -1,5 +1,5 @@
 export const createEpic = `
-    import createEpic from '@obstas-ui/create-epic'
+    import createEpic from '@obstas-ui/create-epic';
         
     export default [
         createEpic(

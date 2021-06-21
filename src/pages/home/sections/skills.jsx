@@ -14,6 +14,49 @@ import webpackIcon from 'img/icons/webpack.svg';
 import reduxIcon from 'img/icons/redux.svg';
 import rxjsIcon from 'img/icons/rxjs.svg';
 
+const skills = [
+    {
+        name: 'React',
+        icon: reactIcon
+    },
+    {
+        name: 'NodeJS',
+        icon: nodejsIcon
+    },
+    {
+        name: 'Mongo DB',
+        icon: mongodbIcon
+    },
+    {
+        name: 'Redis',
+        icon: redisIcon
+    },
+    {
+        name: 'Rabbitmq',
+        icon: rabbitmqIcon
+    },
+    {
+        name: 'HAProxy',
+        icon: haproxyIcon
+    },
+    {
+        name: 'Lerna',
+        icon: lernaIcon
+    },
+    {
+        name: 'Webpack',
+        icon: webpackIcon
+    },
+    {
+        name: 'Redux',
+        icon: reduxIcon
+    },
+    {
+        name: 'RxJS',
+        icon: rxjsIcon
+    }
+];
+
 const ImageWrap = (props) => {
     return (
         <div
@@ -41,155 +84,24 @@ const Skills = () => {
                     bottom: 1,
                     left: 1.5
                 }}>
-                <FlexItem>
-                    <Spacer bottom={1}>
-                        <ImageWrap>
-                            <img
-                                alt="React"
-                                src={reactIcon}
-                                height="auto"
-                                width="100%"
-                            />
-                        </ImageWrap>
-                    </Spacer>
+                {skills.map((skill, index) => {
+                    return (
+                        <FlexItem key={index}>
+                            <Spacer bottom={1}>
+                                <ImageWrap>
+                                    <img
+                                        alt={skill.name}
+                                        src={skill.icon}
+                                        height="auto"
+                                        width="100%"
+                                    />
+                                </ImageWrap>
+                            </Spacer>
 
-                    <Text align="center">React</Text>
-                </FlexItem>
-
-                <FlexItem>
-                    <Spacer bottom={1}>
-                        <ImageWrap>
-                            <img
-                                alt="Node JS"
-                                src={nodejsIcon}
-                                height="auto"
-                                width="100%"
-                            />
-                        </ImageWrap>
-                    </Spacer>
-
-                    <Text align="center">Node JS</Text>
-                </FlexItem>
-
-                <FlexItem>
-                    <Spacer bottom={1}>
-                        <ImageWrap>
-                            <img
-                                alt="Mongo DB"
-                                src={mongodbIcon}
-                                height="auto"
-                                width="100%"
-                            />
-                        </ImageWrap>
-                    </Spacer>
-
-                    <Text align="center">Mongo DB</Text>
-                </FlexItem>
-
-                <FlexItem>
-                    <Spacer bottom={1}>
-                        <ImageWrap>
-                            <img
-                                alt="Redis"
-                                src={redisIcon}
-                                height="auto"
-                                width="100%"
-                            />
-                        </ImageWrap>
-                    </Spacer>
-
-                    <Text align="center">Redis</Text>
-                </FlexItem>
-
-                <FlexItem>
-                    <Spacer bottom={1}>
-                        <ImageWrap>
-                            <img
-                                alt="Rabbitmq"
-                                src={rabbitmqIcon}
-                                height="auto"
-                                width="100%"
-                            />
-                        </ImageWrap>
-                    </Spacer>
-
-                    <Text align="center">Rabbitmq</Text>
-                </FlexItem>
-
-                <FlexItem>
-                    <Spacer bottom={1}>
-                        <ImageWrap>
-                            <img
-                                alt="HAProxy"
-                                src={haproxyIcon}
-                                height="auto"
-                                width="100%"
-                            />
-                        </ImageWrap>
-                    </Spacer>
-
-                    <Text align="center">HAProxy</Text>
-                </FlexItem>
-
-                <FlexItem>
-                    <Spacer bottom={1}>
-                        <ImageWrap>
-                            <img
-                                alt="Lerna"
-                                src={lernaIcon}
-                                height="auto"
-                                width="100%"
-                            />
-                        </ImageWrap>
-                    </Spacer>
-
-                    <Text align="center">Lerna</Text>
-                </FlexItem>
-
-                <FlexItem>
-                    <Spacer bottom={1}>
-                        <ImageWrap>
-                            <img
-                                alt="Webpack"
-                                src={webpackIcon}
-                                height="auto"
-                                width="100%"
-                            />
-                        </ImageWrap>
-                    </Spacer>
-
-                    <Text align="center">Webpack</Text>
-                </FlexItem>
-
-                <FlexItem>
-                    <Spacer bottom={1}>
-                        <ImageWrap>
-                            <img
-                                alt="Redux"
-                                src={reduxIcon}
-                                height="auto"
-                                width="100%"
-                            />
-                        </ImageWrap>
-                    </Spacer>
-
-                    <Text align="center">Redux</Text>
-                </FlexItem>
-
-                <FlexItem>
-                    <Spacer bottom={1}>
-                        <ImageWrap>
-                            <img
-                                alt="Rx JS"
-                                src={rxjsIcon}
-                                height="auto"
-                                width="100%"
-                            />
-                        </ImageWrap>
-                    </Spacer>
-
-                    <Text align="center">Rx JS</Text>
-                </FlexItem>
+                            <Text align="center">{skill.name}</Text>
+                        </FlexItem>
+                    );
+                })}
             </Flex>
         </div>
     );

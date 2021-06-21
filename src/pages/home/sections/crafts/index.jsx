@@ -20,7 +20,7 @@ const Crafts = () => {
     return (
         <div>
             <Text as="h6">
-                Obstas UI Framework
+                {'Obstas UI Framework'}
             </Text>
 
             <Text as="p">
