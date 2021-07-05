@@ -30,7 +30,7 @@ const Contact = asyncComponent({
 
 const Contributions = asyncComponent({
     component: () => import('src/pages/home/sections/contributions.jsx'),
-    fallback: () => <SectionPlaceholder height="160px" />
+    fallback: () => <SectionPlaceholder height="480px" />
 });
 
 const Home = (props) => {

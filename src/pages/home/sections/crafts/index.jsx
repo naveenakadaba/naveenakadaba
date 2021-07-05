@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { css } from 'styled-components';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import js from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
 import docco from 'react-syntax-highlighter/dist/esm/styles/hljs/docco';
@@ -18,7 +19,7 @@ SyntaxHighlighter.registerLanguage('javascript', js);
 
 const Crafts = () => {
     return (
-        <div>
+        <Fragment>
             <Text as="h6">
                 {'Obstas UI Framework'}
             </Text>
@@ -95,10 +96,13 @@ const Crafts = () => {
                 {'Flex component:'}
             </Text>
 
-            <SyntaxHighlighter language="javascript" style={docco}>
+            <SyntaxHighlighter
+                css={css`margin-bottom: 0;`}
+                language="javascript"
+                style={docco}>
                 {flexCodeBlock}
             </SyntaxHighlighter>
-        </div>
+        </Fragment>
     );
 };
 
