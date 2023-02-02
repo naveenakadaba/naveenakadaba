@@ -5,24 +5,12 @@ import Divider from '@obstas-ui/divider';
 
 const contributions = [
     {
-        title: 'OneCEC Clubcard',
-        description: 'Tesco customer clubcard app'
+        title: 'Invisible App',
+        description: 'Invisible App™ gives customers branded app-like experiences but saves businesses from having to build, test, deploy and support traditional mobile applications and their infrastructure.'
     },
     {
-        title: 'OneCEC Juvo',
-        description: 'Tesco customer orders app'
-    },
-    {
-        title: 'Swiggy Partner App',
-        description: 'Restaurant portal'
-    },
-    {
-        title: 'Baba Fattoosh',
-        description: 'Food delivery app'
-    },
-    {
-        title: 'The Fuller Life',
-        description: 'Health and Wellness app'
+        title: 'Invisible Portal',
+        description: 'Secure, automated and easy to build. Gone are the days of resorting to email or complex portals for data, document and file exchange.'
     }
 ];
 
@@ -52,10 +40,6 @@ const Contributions = () => {
                     );
                 })}
             </Flex>
-
-            <Text as="p" spacing={{ bottom: 0 }}>
-                ...and many more.
-            </Text>
         </div>
     );
 };

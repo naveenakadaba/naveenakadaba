@@ -17,7 +17,7 @@ import backgroundImage from 'img/page-templates/default/background.jpg';
 import naveenakadabaImage from 'img/naveenakadaba.jpg';
 import githubIcon from 'img/icons/github.svg';
 import linkedinIcon from 'img/icons/linkedin.svg';
-import facebookIcon from 'img/icons/facebook.svg';
+//import facebookIcon from 'img/icons/facebook.svg';
 
 const DefaultPageTemplate = (props) => {
     const { children } = props;
@@ -26,7 +26,7 @@ const DefaultPageTemplate = (props) => {
     return (
         <Fragment>
             <Background
-                backgroundColor="#0b0f58"
+                backgroundColor="#fff"
                 backgroundImage={backgroundImage}
             />
 
@@ -49,7 +49,8 @@ const DefaultPageTemplate = (props) => {
                         <Card
                             style={{
                                 border: 0,
-                                boxShadow: 'none'
+                                borderRadius: '10px',
+                                boxShadow: '0 4px 8px 0 #333'
                             }}
                             spacing={{
                                 top: 3,
@@ -57,187 +58,177 @@ const DefaultPageTemplate = (props) => {
                                 bottom: 3,
                                 left: 3
                             }}>
-                            <Flex
-                                direction="column"
-                                justifyContent="center"
-                                wrap="nowrap"
-                                lg={{
-                                    direction: 'row',
-                                    alignItems: 'center'
-                                }}>
-                                <FlexItem
+                            <Spacer bottom={2}>
+                                <Flex
+                                    direction="column"
+                                    justifyContent="center"
+                                    wrap="nowrap"
                                     lg={{
-                                        grow: 1,
-                                        spacing: { right: 1 }
+                                        direction: 'row',
+                                        alignItems: 'center'
                                     }}>
-                                    <Spacer
-                                        bottom={1}
-                                        lg={{ bottom: 0 }}>
-                                        <Card>
-                                            <img
-                                                style={{ display: 'block' }}
-                                                alt="Naveena Kadaba"
-                                                src={naveenakadabaImage}
-                                                height="auto"
-                                                width="100%"
-                                            />
-                                        </Card>
-                                    </Spacer>
-                                </FlexItem>
+                                    <FlexItem
+                                        lg={{
+                                            grow: 1,
+                                            spacing: { right: 1 }
+                                        }}>
+                                        <Spacer
+                                            bottom={1}
+                                            lg={{ bottom: 0 }}>
+                                            <Card>
+                                                <img
+                                                    style={{ display: 'block' }}
+                                                    alt="Naveena Kadaba"
+                                                    src={naveenakadabaImage}
+                                                    height="auto"
+                                                    width="100%"
+                                                />
+                                            </Card>
+                                        </Spacer>
+                                    </FlexItem>
 
-                                <FlexItem
-                                    lg={{
-                                        shrink: 0,
-                                        width: '50%'
-                                    }}>
-                                    <Spacer
-                                        lg={{ left: 3 }}>
-                                        <Text as="p" size={1}>
-                                            Hi, I am <Text inline={true} size={2} weight="bold">
-                                                Naveena Kadaba
+                                    <FlexItem
+                                        lg={{
+                                            shrink: 0,
+                                            width: '50%'
+                                        }}>
+                                        <Spacer
+                                            lg={{ left: 3 }}>
+                                            <Text as="p" size={1}>
+                                                Hi, I am <Text inline={true} size={2} weight="bold">
+                                                    Naveena Kadaba
+                                                </Text>
                                             </Text>
-                                        </Text>
 
-                                        <Text as="p" size={1} spacing={{ bottom: 2 }}>
-                                            I am a JavaScript Developer based in Bangalore, India.
-                                        </Text>
+                                            <Text as="p" size={1} spacing={{ bottom: 2 }}>
+                                                I am a JavaScript Developer based in Bangalore, India.
+                                            </Text>
 
-                                        <Flex
-                                            alignItems="center"
-                                            wrap="nowrap"
-                                            itemSpacing={{
-                                                right: 1.5
-                                            }}>
-                                            <FlexItem>
-                                                <Link
-                                                    href="https://github.com/naveenakadaba"
-                                                    title="Github"
-                                                    target="_blank">
-                                                    <img
-                                                        alt="Github"
-                                                        src={githubIcon}
-                                                        height="32px"
-                                                        width="32px"
-                                                    />
-                                                </Link>
-                                            </FlexItem>
+                                            <Flex
+                                                alignItems="center"
+                                                wrap="nowrap"
+                                                itemSpacing={{
+                                                    right: 1.5
+                                                }}>
+                                                <FlexItem>
+                                                    <Link
+                                                        href="https://github.com/naveenakadaba"
+                                                        title="Github"
+                                                        target="_blank">
+                                                        <img
+                                                            alt="Github"
+                                                            src={githubIcon}
+                                                            height="32px"
+                                                            width="32px"
+                                                        />
+                                                    </Link>
+                                                </FlexItem>
 
-                                            <FlexItem>
-                                                <Link
-                                                    href="https://www.linkedin.com/in/naveenakadaba"
-                                                    title="LinkedIn"
-                                                    target="_blank">
-                                                    <img
-                                                        alt="LinkedIn"
-                                                        src={linkedinIcon}
-                                                        height="32px"
-                                                        width="32px"
-                                                    />
-                                                </Link>
-                                            </FlexItem>
+                                                <FlexItem>
+                                                    <Link
+                                                        href="https://www.linkedin.com/in/naveenakadaba"
+                                                        title="LinkedIn"
+                                                        target="_blank">
+                                                        <img
+                                                            alt="LinkedIn"
+                                                            src={linkedinIcon}
+                                                            height="32px"
+                                                            width="32px"
+                                                        />
+                                                    </Link>
+                                                </FlexItem>
 
-                                            <FlexItem spacing={{ right: 0 }}>
-                                                <Link
-                                                    href="https://www.facebook.com/naveena.kadaba/"
-                                                    title="Facebook"
-                                                    target="_blank">
-                                                    <img
-                                                        alt="Facebook"
-                                                        src={facebookIcon}
-                                                        height="32px"
-                                                        width="32px"
-                                                    />
-                                                </Link>
-                                            </FlexItem>
-                                        </Flex>
-                                    </Spacer>
-                                </FlexItem>
-                            </Flex>
+                                                {/* <FlexItem spacing={{ right: 0 }}>
+                                                    <Link
+                                                        href="https://www.facebook.com/naveena.kadaba/"
+                                                        title="Facebook"
+                                                        target="_blank">
+                                                        <img
+                                                            alt="Facebook"
+                                                            src={facebookIcon}
+                                                            height="32px"
+                                                            width="32px"
+                                                        />
+                                                    </Link>
+                                                </FlexItem> */}
+                                            </Flex>
+                                        </Spacer>
+                                    </FlexItem>
+                                </Flex>
+                            </Spacer>
+
+                            <Spacer bottom={2}>
+                                <Tabs>
+                                    <Tab
+                                        active={activeTab === 'about'}
+                                        title="About"
+                                        onClick={(event) => {
+                                            event.preventDefault();
+                                            setActiveTab('about');
+                                        }}>
+                                        About
+                                    </Tab>
+
+                                    {/* <Tab
+                                        active={activeTab === 'crafts'}
+                                        title="Crafts"
+                                        onClick={(event) => {
+                                            event.preventDefault();
+                                            setActiveTab('crafts');
+                                        }}>
+                                        Crafts
+                                    </Tab> */}
+
+                                    <Tab
+                                        active={activeTab === 'skills'}
+                                        title="Skills"
+                                        onClick={(event) => {
+                                            event.preventDefault();
+                                            setActiveTab('skills');
+                                        }}>
+                                        Skills
+                                    </Tab>
+
+                                    <Tab
+                                        active={activeTab === 'workExperience'}
+                                        title="Work experience"
+                                        onClick={(event) => {
+                                            event.preventDefault();
+                                            setActiveTab('workExperience');
+                                        }}>
+                                        Work experience
+                                    </Tab>
+
+                                    <Tab
+                                        active={activeTab === 'contributions'}
+                                        title="Contributions"
+                                        onClick={(event) => {
+                                            event.preventDefault();
+                                            setActiveTab('contributions');
+                                        }}>
+                                        Contributions
+                                    </Tab>
+
+                                    <Tab
+                                        active={activeTab === 'contact'}
+                                        title="Let's talk"
+                                        onClick={(event) => {
+                                            event.preventDefault();
+                                            setActiveTab('contact');
+                                        }}>
+                                        {'Let\'s talk'}
+                                    </Tab>
+                                </Tabs>
+                            </Spacer>
+
+                            {Children.map(children, (child, index) => {
+                                return cloneElement(child, {
+                                    key: index,
+                                    activeTab
+                                });
+                            })}
                         </Card>
                     </Spacer>
-
-                    <Card
-                        style={{
-                            border: 0,
-                            boxShadow: 'none'
-                        }}
-                        spacing={{
-                            top: 2,
-                            right: 2,
-                            bottom: 2,
-                            left: 2
-                        }}>
-                        <Spacer bottom={2}>
-                            <Tabs>
-                                <Tab
-                                    active={activeTab === 'about'}
-                                    title="About"
-                                    onClick={(event) => {
-                                        event.preventDefault();
-                                        setActiveTab('about');
-                                    }}>
-                                    About
-                                </Tab>
-
-                                <Tab
-                                    active={activeTab === 'crafts'}
-                                    title="Crafts"
-                                    onClick={(event) => {
-                                        event.preventDefault();
-                                        setActiveTab('crafts');
-                                    }}>
-                                    Crafts
-                                </Tab>
-
-                                <Tab
-                                    active={activeTab === 'skills'}
-                                    title="Skills"
-                                    onClick={(event) => {
-                                        event.preventDefault();
-                                        setActiveTab('skills');
-                                    }}>
-                                    Skills
-                                </Tab>
-
-                                <Tab
-                                    active={activeTab === 'workExperience'}
-                                    title="Work experience"
-                                    onClick={(event) => {
-                                        event.preventDefault();
-                                        setActiveTab('workExperience');
-                                    }}>
-                                    Work experience
-                                </Tab>
-
-                                <Tab
-                                    active={activeTab === 'contributions'}
-                                    title="Contributions"
-                                    onClick={(event) => {
-                                        event.preventDefault();
-                                        setActiveTab('contributions');
-                                    }}>
-                                    Contributions
-                                </Tab>
-
-                                <Tab
-                                    active={activeTab === 'contact'}
-                                    title="Let's talk"
-                                    onClick={(event) => {
-                                        event.preventDefault();
-                                        setActiveTab('contact');
-                                    }}>
-                                    {'Let\'s talk'}
-                                </Tab>
-                            </Tabs>
-                        </Spacer>
-
-                        {Children.map(children, (child, index) => {
-                            return cloneElement(child, {
-                                key: index,
-                                activeTab
-                            });
-                        })}
-                    </Card>
                 </Spacer>
             </Container>
         </Fragment>

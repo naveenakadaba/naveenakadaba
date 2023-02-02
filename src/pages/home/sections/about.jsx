@@ -5,7 +5,7 @@ const About = () => {
     return (
         <div>
             <Text as="p">
-                {'I live in Bangalore, India working full time as a JavaScript developer. I\'ve been building stuff on the web for the last 8 years, working with multiple organizations.'}
+                {'I live in Bangalore, India working full time as a JavaScript developer. I\'ve been building stuff on the web for the last 9 years, working with multiple organizations.'}
             </Text>
 
             <Text as="p">

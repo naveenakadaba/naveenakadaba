@@ -13,6 +13,7 @@ import lernaIcon from 'img/icons/lerna.svg';
 import webpackIcon from 'img/icons/webpack.svg';
 import reduxIcon from 'img/icons/redux.svg';
 import rxjsIcon from 'img/icons/rxjs.svg';
+import playwrightIcon from 'img/icons/playwright.svg';
 
 const skills = [
     {
@@ -54,6 +55,10 @@ const skills = [
     {
         name: 'RxJS',
         icon: rxjsIcon
+    },
+    {
+        name: 'Playwright',
+        icon: playwrightIcon
     }
 ];
 
@@ -62,9 +67,13 @@ const ImageWrap = (props) => {
         <div
             style={{
                 alignItems: 'center',
+                border: '1px solid #d6d6d6',
+                borderRadius: '5px',
                 display: 'flex',
                 flexWrap: 'nowrap',
                 height: '128px',
+                padding: '16px',
+                overflow: 'hidden',
                 width: '128px'
             }}
             {...props}
@@ -75,13 +84,14 @@ const ImageWrap = (props) => {
 const Skills = () => {
     return (
         <div style={{ ...margin({ bottom: -1 }) }}>
+
             <Flex
                 alignItems="center"
-                justifyContent="center"
+                justifyContent="flex-start"
                 wrap="wrap"
                 itemSpacing={{
                     right: 1.5,
-                    bottom: 1,
+                    bottom: 2,
                     left: 1.5
                 }}>
                 {skills.map((skill, index) => {
@@ -98,7 +108,7 @@ const Skills = () => {
                                 </ImageWrap>
                             </Spacer>
 
-                            <Text align="center">{skill.name}</Text>
+                            <Text align="center" weight="bold">{skill.name}</Text>
                         </FlexItem>
                     );
                 })}

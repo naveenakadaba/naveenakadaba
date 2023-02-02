@@ -3,6 +3,7 @@ import { margin } from '@obstas-ui/theme';
 import Flex, { FlexItem } from '@obstas-ui/flex';
 import Spacer from '@obstas-ui/spacer';
 import Text from '@obstas-ui/text';
+import ushurLogo from 'img/logos/ushur.png';
 import tescoLogo from 'img/logos/tesco.png';
 import swiggyLogo from 'img/logos/swiggy.jpg';
 import coviamLogo from 'img/logos/coviam.png';
@@ -10,10 +11,16 @@ import mapplinksLogo from 'img/logos/mapplinks.jpg';
 
 const organizations = [
     {
+        name: 'Ushur',
+        logo: ushurLogo,
+        designation: 'Lead UI Developer',
+        duration: 'Less than a year'
+    },
+    {
         name: 'Tesco',
         logo: tescoLogo,
         designation: 'SDE2',
-        duration: '2+ years'
+        duration: '3+ years'
     },
     {
         name: 'Swiggy',
@@ -40,9 +47,12 @@ const ImageWrap = (props) => {
         <div
             style={{
                 alignItems: 'center',
+                border: '1px solid #d6d6d6',
+                borderRadius: '5px',
                 display: 'flex',
                 flexWrap: 'nowrap',
                 height: '128px',
+                overflow: 'hidden',
                 width: '128px'
             }}
             {...props}
@@ -55,11 +65,11 @@ const WorkExperience = () => {
         <div style={{ ...margin({ bottom: -1 }) }}>
             <Flex
                 alignItems="center"
-                justifyContent="center"
+                justifyContent="left"
                 wrap="wrap"
                 itemSpacing={{
                     right: 1.5,
-                    bottom: 1,
+                    bottom: 2,
                     left: 1.5
                 }}>
                 {organizations.map((organization, index) => {
@@ -76,7 +86,7 @@ const WorkExperience = () => {
                                 </ImageWrap>
                             </Spacer>
 
-                            <Text align="center" spacing={{ bottom: 0.5 }}>{organization.name}</Text>
+                            <Text align="center" spacing={{ bottom: 0.5 }} weight="bold">{organization.name}</Text>
                             <Text align="center" spacing={{ bottom: 0.5 }}>{organization.designation}</Text>
                             <Text align="center">{organization.duration}</Text>
                         </FlexItem>
