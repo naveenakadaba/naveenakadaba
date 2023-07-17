@@ -101,7 +101,7 @@ const App = () => {
       <div className="mx-8">
         <div className="mb-4 mt-8">
           <div className="flex flex-row items-center">
-            <div className="w-[240px] rounded-full overflow-hidden border border-solid border-orange-600 mr-4 mb-4">
+            <div className="w-[240px] rounded-full overflow-hidden shadow-2xl mr-4 mb-4">
               <img className="h-auto w-100" alt="photo" src={photo} />
             </div>
 
