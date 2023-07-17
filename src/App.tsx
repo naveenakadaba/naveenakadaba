@@ -10,6 +10,11 @@ import {
 import SyntaxHighlighter from "react-syntax-highlighter";
 import monokai from "react-syntax-highlighter/dist/esm/styles/hljs/monokai";
 import photo from "src/photo.jpeg";
+import ushurLogo from "src/logos/ushur.png";
+import tescoLogo from "src/logos/tesco.png";
+import swiggyLogo from "src/logos/swiggy.jpeg";
+import coviamLogo from "src/logos/coviam.png";
+import mapplinksLogo from "src/logos/mapplinks.jpeg";
 
 const App = () => {
   const [skills] = useState([
@@ -32,35 +37,35 @@ const App = () => {
   const [orgs] = useState([
     {
       name: "Ushur",
-      logo: "src/logos/ushur.png",
+      logo: ushurLogo,
       designation: "Lead UI Developer",
       experience: "Less than a year",
       url: "https://ushur.com",
     },
     {
       name: "Tesco",
-      logo: "src/logos/tesco.png",
+      logo: tescoLogo,
       designation: "SDE2",
       experience: "3.5+ years",
       url: "https://tesco.com",
     },
     {
       name: "Swiggy",
-      logo: "src/logos/swiggy.jpeg",
+      logo: swiggyLogo,
       designation: "UI Engineer 2",
       experience: "1.5+ years",
       url: "https://swiggy.com",
     },
     {
       name: "Coviam",
-      logo: "src/logos/coviam.png",
+      logo: coviamLogo,
       designation: "Lead Engineer",
       experience: "Less than a year",
       url: "https://coviam.com",
     },
     {
       name: "Mapplinks",
-      logo: "src/logos/mapplinks.jpeg",
+      logo: mapplinksLogo,
       designation: "Senior Web Developer",
       experience: "1.5+ years",
       url: "https://mapplinks.com",
