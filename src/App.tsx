@@ -7,6 +7,8 @@ import {
   Phone as PhoneIcon,
   EnvelopeAt as EnvelopeAltIcon,
 } from "react-bootstrap-icons";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import monokai from "react-syntax-highlighter/dist/esm/styles/hljs/monokai";
 import photo from "src/photo.jpeg";
 
 const App = () => {
@@ -168,6 +170,69 @@ const App = () => {
           <h2 className="font-bold text-2xl mb-2">Experience</h2>
           <div className="max-w-[640px]">
             <div className="flex flex-row flex-wrap">{renderExperience()}</div>
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <Divider />
+        </div>
+
+        <div className="mb-4">
+          <h2 className="font-bold text-2xl mb-2">Portfolio</h2>
+          <p className="mb-2">
+            Built a NodeJS framework on top of Express which takes advantage of
+            TypeScript decorators.
+          </p>
+
+          <div className="pb-4">
+            <SyntaxHighlighter language="javascript" style={monokai}>
+              {`@Controller("/users")
+class UserController extends BaseController {
+  public constructor(private userService = new UserService()) {
+    super();
+  }
+
+  @BasicAuth()
+  @Post("/")
+  public async create(
+    @Body() createUserDto: CreateUserDto,
+    requestContext: RequestContext
+  ): Promise<Response> {
+    const responseBuilder = new ResponseBuilder();
+    responseBuilder.setStatus(201);
+    responseBuilder.setBody(
+      JsonMapper.mapDto(
+        await this.userService.create(
+          createUserDto,
+          requestContext.getAttribute("provider") as string
+        )
+      )
+    );
+    return responseBuilder.build();
+  }`}
+            </SyntaxHighlighter>
+          </div>
+
+          <div className="pb-4">
+            <SyntaxHighlighter language="javascript" style={monokai}>
+              {`@Service()
+class UserService extends BaseService {
+  constructor(
+    private userRepository = new UserRepository(),
+    private roleRepository = new RoleRepository()
+  ) {
+    super();
+  }
+
+  public async create(
+    @ValidationSchema(createUserSchema) createUserDto: CreateUserDto,
+    provider: string
+  ): Promise<UserResponseDto> {
+    if (await this.userRepository.findByEmail(createUserDto.getEmail())) {
+      const errorCode = errorCodes.ERR_EMAIL_EXISTS;
+      throw new ClientError(409, errorCode, errorMessages[errorCode]);
+    }`}
+            </SyntaxHighlighter>
           </div>
         </div>
 
