@@ -73,7 +73,7 @@ const App = () => {
   const renderSkills = () => {
     return skills.map((skill) => (
       <div key={skill} className="mr-4 mb-4">
-        <span className="block w-[120px] py-1 rounded text-center font-medium bg-white border border-solid">
+        <span className="block w-[100px] py-1 rounded text-center font-medium bg-white border-1 border-gray-100">
           {skill}
         </span>
       </div>
@@ -82,8 +82,11 @@ const App = () => {
 
   const renderExperience = () => {
     return orgs.map((org) => (
-      <div key={org.name} className="mr-4 mb-4 text-center">
-        <div className="w-[120px] border border-dotted border-solid mb-2">
+      <div
+        key={org.name}
+        className="w-100 sm:max-w-[160px] p-4 sm:mr-4 mb-4 text-center bg-white shadow-lg"
+      >
+        <div className="max-w-[120px] border-1 border-gray-100 mb-2 mx-auto">
           <a
             href={org.url}
             title={org.name}
@@ -104,21 +107,21 @@ const App = () => {
   return (
     <div className="border-t-4 border-orange-600">
       <Container width="1024px">
-        <div className="mx-8">
+        <div className="mx-4 sm:mx-8">
           <div className="p-8 pb-0 bg-white shadow-xl">
-            <div className="flex flex-row items-center">
-              <div className="hidden w-[360px] max-w-full sm:block">
-                <img
-                  className="w-auto max-h-[480px] max-w-full mx-auto"
-                  alt="photo"
-                  src={photo}
-                />
-              </div>
+            <div className="flex flex-col sm:flex-row items-center">
+              <img
+                className="w-auto max-h-[240px] sm:max-h-[480px] max-w-full mx-auto"
+                alt="photo"
+                src={photo}
+              />
 
-              <div className="flex-1">
-                <p className="font-bold text-xl text-center mb-2">Hello</p>
+              <span className="block sm:hidden h-[1px] w-[240px] bg-gray-100 mb-4" />
 
-                <h1 className="font-bold text-3xl text-center mb-2">
+              <div className="sm:flex-1">
+                <p className="font-bold sm:text-xl text-center mb-2">Hello</p>
+
+                <h1 className="font-bold text-xl sm:text-3xl text-center mb-2">
                   I'm <span className="text-orange-600">Naveena Kadaba</span>
                 </h1>
 
@@ -153,7 +156,7 @@ const App = () => {
             </div>
           </div>
 
-          <div className="mx-8">
+          <div className="mx-4 sm:mx-8">
             <div className="mt-8 mb-8">
               <h2 className="font-bold text-2xl">About me</h2>
               <span className="block h-[4px] w-[40px] bg-orange-600 mb-4" />
@@ -189,7 +192,7 @@ const App = () => {
               <h2 className="font-bold text-2xl mb-2">Experience</h2>
               <span className="block h-[4px] w-[40px] bg-orange-600 mb-4" />
 
-              <div className="flex flex-row flex-wrap">
+              <div className="flex flex-col sm:flex-row sm:flex-wrap">
                 {renderExperience()}
               </div>
             </div>
