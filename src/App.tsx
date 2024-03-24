@@ -107,7 +107,7 @@ const App = () => {
         <div className="mx-8">
           <div className="p-8 pb-0 bg-white shadow-xl">
             <div className="flex flex-row items-center">
-              <div className="w-[360px] max-w-full">
+              <div className="hidden w-[360px] max-w-full sm:block">
                 <img
                   className="w-auto max-h-[480px] max-w-full mx-auto"
                   alt="photo"
