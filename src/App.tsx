@@ -7,9 +7,7 @@ import {
   Phone as PhoneIcon,
   EnvelopeAt as EnvelopeAltIcon,
 } from "react-bootstrap-icons";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import monokai from "react-syntax-highlighter/dist/esm/styles/hljs/monokai";
-import photo from "src/photo.jpeg";
+import photo from "src/photo.png";
 import ushurLogo from "src/logos/ushur.png";
 import tescoLogo from "src/logos/tesco.png";
 import swiggyLogo from "src/logos/swiggy.jpeg";
@@ -39,7 +37,7 @@ const App = () => {
       name: "Ushur",
       logo: ushurLogo,
       designation: "Lead UI Developer",
-      experience: "Less than a year",
+      experience: "1.5+ years",
       url: "https://ushur.com",
     },
     {
@@ -75,7 +73,7 @@ const App = () => {
   const renderSkills = () => {
     return skills.map((skill) => (
       <div key={skill} className="mr-4 mb-4">
-        <span className="block w-[120px] py-1 rounded text-center font-medium border border-solid">
+        <span className="block w-[120px] py-1 rounded text-center font-medium bg-white border border-solid">
           {skill}
         </span>
       </div>
@@ -104,183 +102,143 @@ const App = () => {
   };
 
   return (
-    <Container width="1024px">
-      <div className="mx-8">
-        <div className="mb-4 mt-8">
-          <div className="flex flex-row items-center">
-            <div className="w-[240px] rounded-full overflow-hidden shadow-2xl mr-4 mb-4">
-              <img className="h-auto w-100" alt="photo" src={photo} />
-            </div>
+    <div className="border-t-4 border-orange-600">
+      <Container width="1024px">
+        <div className="mx-8">
+          <div className="p-8 pb-0 bg-white shadow-xl">
+            <div className="flex flex-row items-center">
+              <div className="w-[360px] max-w-full">
+                <img
+                  className="w-auto max-h-[480px] max-w-full mx-auto"
+                  alt="photo"
+                  src={photo}
+                />
+              </div>
 
-            <div className="mb-4">
-              <h1 className="font-bold text-3xl mb-4">Naveena Kadaba</h1>
+              <div className="flex-1">
+                <p className="font-bold text-xl text-center mb-2">Hello</p>
 
-              <div className="flex flex-row flex-nowrap">
-                <span className="mr-4">
+                <h1 className="font-bold text-3xl text-center mb-2">
+                  I'm <span className="text-orange-600">Naveena Kadaba</span>
+                </h1>
+
+                <p className="text-center mb-8">
+                  A passionate JavaScript Developer from India
+                </p>
+
+                <div className="flex flex-row flex-nowrap justify-center mb-8">
+                  <span className="mr-4">
+                    <a
+                      className="text-orange-500"
+                      href="https://www.linkedin.com/in/naveenakadaba/"
+                      title="LinkedIn"
+                      rel="noreferrer noopener"
+                      target="_blank"
+                    >
+                      <LinkedinIcon size={28} />
+                    </a>
+                  </span>
+
                   <a
-                    href="https://www.linkedin.com/in/naveenakadaba/"
-                    title="LinkedIn"
+                    className="text-orange-500"
+                    href="https://github.com/naveenakadaba"
+                    title="Github"
                     rel="noreferrer noopener"
                     target="_blank"
                   >
-                    <LinkedinIcon size={28} />
+                    <GithubIcon size={28} />
                   </a>
-                </span>
-
-                <a
-                  href="https://github.com/naveenakadaba"
-                  title="Github"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  <GithubIcon size={28} />
-                </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="mb-8">
-          <Divider />
-        </div>
+          <div className="mx-8">
+            <div className="mt-8 mb-8">
+              <h2 className="font-bold text-2xl">About me</h2>
+              <span className="block h-[4px] w-[40px] bg-orange-600 mb-4" />
 
-        <div className="mb-8">
-          <h2 className="font-bold text-2xl mb-2">About me</h2>
-          <p>
-            I live in Bangalore, India working full time as a JavaScript
-            developer. I've been building stuff on the web for the last 10
-            years, working with multiple organizations. I like to code things
-            from scratch, and enjoy bringing ideas to life in the browser. I
-            absolutely love learning new things and taking on new challenges. I
-            believe in quality not in quantity.
-          </p>
-        </div>
+              <p>
+                I live in Bangalore, India working full time as a JavaScript
+                developer. I've been building stuff on the web for the last 10
+                years, working with multiple organizations. I like to code
+                things from scratch, and enjoy bringing ideas to life in the
+                browser. I absolutely love learning new things and taking on new
+                challenges.
+              </p>
+            </div>
 
-        <div className="mb-8">
-          <Divider />
-        </div>
+            <div className="mb-8">
+              <Divider />
+            </div>
 
-        <div className="mb-4">
-          <h2 className="font-bold text-2xl mb-2">Skills</h2>
-          <div className="max-w-[640px]">
-            <div className="flex flex-row flex-wrap">{renderSkills()}</div>
+            <div className="mb-4">
+              <h2 className="font-bold text-2xl">Skills</h2>
+              <span className="block h-[4px] w-[40px] bg-orange-600 mb-4" />
+
+              <div className="max-w-[640px]">
+                <div className="flex flex-row flex-wrap">{renderSkills()}</div>
+              </div>
+            </div>
+
+            <div className="mb-8">
+              <Divider />
+            </div>
+
+            <div className="mb-4">
+              <h2 className="font-bold text-2xl mb-2">Experience</h2>
+              <span className="block h-[4px] w-[40px] bg-orange-600 mb-4" />
+
+              <div className="flex flex-row flex-wrap">
+                {renderExperience()}
+              </div>
+            </div>
+
+            <div className="mb-8">
+              <Divider />
+            </div>
+
+            <div className="mb-8">
+              <h2 className="font-bold text-2xl mb-2">Contact</h2>
+              <span className="block h-[4px] w-[40px] bg-orange-600 mb-4" />
+
+              <div className="flex flex-row flex-nowrap items-center mb-2">
+                <span className="mr-2">
+                  <PhoneIcon size={20} />
+                </span>
+                <span>+91-9482343699</span>
+              </div>
+
+              <div className="flex flex-row flex-nowrap items-center">
+                <span className="mr-2">
+                  <EnvelopeAltIcon size={20} />
+                </span>
+                <span>naveenakadaba@gmail.com</span>
+              </div>
+            </div>
+
+            <div className="mb-8">
+              <Divider />
+            </div>
+
+            <div className="mb-8">
+              <h2 className="font-bold text-2xl mb-2">Resume</h2>
+              <span className="block h-[4px] w-[40px] bg-orange-600 mb-4" />
+
+              <a
+                className="block w-[160px] px-2 py-1 rounded text-center bg-orange-600 text-white"
+                href="https://drive.google.com/file/d/1CGLmhCj-tmQUo4YeNOCINWBlxTjsXI5e/view?usp=sharing"
+                title="Download"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Download
+              </a>
+            </div>
           </div>
         </div>
-
-        <div className="mb-8">
-          <Divider />
-        </div>
-
-        <div className="mb-4">
-          <h2 className="font-bold text-2xl mb-2">Experience</h2>
-          <div className="max-w-[640px]">
-            <div className="flex flex-row flex-wrap">{renderExperience()}</div>
-          </div>
-        </div>
-
-        <div className="mb-8">
-          <Divider />
-        </div>
-
-        <div className="mb-4">
-          <h2 className="font-bold text-2xl mb-2">Portfolio</h2>
-          <p className="mb-2">
-            Built a NodeJS framework on top of Express which takes advantage of
-            TypeScript decorators.
-          </p>
-
-          <div className="pb-4">
-            <SyntaxHighlighter language="javascript" style={monokai}>
-              {`@Controller("/users")
-class UserController extends BaseController {
-  public constructor(private userService = new UserService()) {
-    super();
-  }
-
-  @BasicAuth()
-  @Post("/")
-  public async create(
-    @Body() createUserDto: CreateUserDto,
-    requestContext: RequestContext
-  ): Promise<Response> {
-    const responseBuilder = new ResponseBuilder();
-    responseBuilder.setStatus(201);
-    responseBuilder.setBody(
-      JsonMapper.mapDto(
-        await this.userService.create(
-          createUserDto,
-          requestContext.getAttribute("provider") as string
-        )
-      )
-    );
-    return responseBuilder.build();
-  }`}
-            </SyntaxHighlighter>
-          </div>
-
-          <div className="pb-4">
-            <SyntaxHighlighter language="javascript" style={monokai}>
-              {`@Service()
-class UserService extends BaseService {
-  constructor(
-    private userRepository = new UserRepository(),
-    private roleRepository = new RoleRepository()
-  ) {
-    super();
-  }
-
-  public async create(
-    @ValidationSchema(createUserSchema) createUserDto: CreateUserDto,
-    provider: string
-  ): Promise<UserResponseDto> {
-    if (await this.userRepository.findByEmail(createUserDto.getEmail())) {
-      const errorCode = errorCodes.ERR_EMAIL_EXISTS;
-      throw new ClientError(409, errorCode, errorMessages[errorCode]);
-    }`}
-            </SyntaxHighlighter>
-          </div>
-        </div>
-
-        <div className="mb-8">
-          <Divider />
-        </div>
-
-        <div className="mb-8">
-          <h2 className="font-bold text-2xl mb-2">Contact</h2>
-
-          <div className="flex flex-row flex-nowrap items-center mb-2">
-            <span className="mr-2">
-              <PhoneIcon size={20} />
-            </span>
-            <span>+91-9482343699</span>
-          </div>
-
-          <div className="flex flex-row flex-nowrap items-center">
-            <span className="mr-2">
-              <EnvelopeAltIcon size={20} />
-            </span>
-            <span>naveenakadaba@gmail.com</span>
-          </div>
-        </div>
-
-        <div className="mb-8">
-          <Divider />
-        </div>
-
-        <div className="mb-8">
-          <h2 className="font-bold text-2xl mb-2">Resume</h2>
-          <a
-            className="block w-[160px] px-2 py-1 rounded text-center bg-orange-600 text-white"
-            href="https://drive.google.com/file/d/1EKA6qff2KltcKJwnYKGKLig6Z9hhxW0P/view?usp=sharing"
-            title="Download"
-            rel="noreferrer noopener"
-            target="_blank"
-          >
-            Download
-          </a>
-        </div>
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 
