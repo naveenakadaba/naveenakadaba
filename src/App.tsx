@@ -105,7 +105,7 @@ const App = () => {
   };
 
   return (
-    <div className="border-t-4 border-orange-600">
+    <div className="border-t-4 border-blue-600">
       <Container width="1024px">
         <div className="mx-4 sm:mx-8">
           <div className="p-8 pb-0 bg-white shadow-xl">
@@ -122,17 +122,17 @@ const App = () => {
                 <p className="font-bold sm:text-xl text-center mb-2">Hello</p>
 
                 <h1 className="font-bold text-xl sm:text-3xl text-center mb-2">
-                  I'm <span className="text-orange-600">Naveena Kadaba</span>
+                  I am <span className="text-blue-600">Naveena Kadaba</span>
                 </h1>
 
                 <p className="text-center mb-8">
-                  A passionate JavaScript Developer from India
+                  I am a passionate JavaScript developer from India.
                 </p>
 
                 <div className="flex flex-row flex-nowrap justify-center mb-8">
                   <span className="mr-4">
                     <a
-                      className="text-orange-500"
+                      className="text-blue-500"
                       href="https://www.linkedin.com/in/naveenakadaba/"
                       title="LinkedIn"
                       rel="noreferrer noopener"
@@ -143,7 +143,7 @@ const App = () => {
                   </span>
 
                   <a
-                    className="text-orange-500"
+                    className="text-blue-500"
                     href="https://github.com/naveenakadaba"
                     title="Github"
                     rel="noreferrer noopener"
@@ -159,15 +159,15 @@ const App = () => {
           <div className="mx-4 sm:mx-8">
             <div className="mt-8 mb-8">
               <h2 className="font-bold text-2xl">About me</h2>
-              <span className="block h-[4px] w-[40px] bg-orange-600 mb-4" />
+              <span className="block h-[4px] w-[40px] bg-blue-600 mb-4" />
 
               <p>
-                I live in Bangalore, India working full time as a JavaScript
-                developer. I've been building stuff on the web for the last 12
-                years, working with multiple organizations. I like to code
-                things from scratch, and enjoy bringing ideas to life in the
-                browser. I absolutely love learning new things and taking on new
-                challenges.
+                I live in Bangalore, India, and work full-time as a JavaScript
+                developer. I've been building for the web for the past 12 years,
+                collaborating with multiple organizations along the way. I enjoy
+                coding things from scratch and love bringing ideas to life in
+                the browser. I'm always excited to learn new things and take on
+                fresh challenges.
               </p>
             </div>
 
@@ -177,7 +177,7 @@ const App = () => {
 
             <div className="mb-4">
               <h2 className="font-bold text-2xl">Skills</h2>
-              <span className="block h-[4px] w-[40px] bg-orange-600 mb-4" />
+              <span className="block h-[4px] w-[40px] bg-blue-600 mb-4" />
 
               <div className="max-w-[640px]">
                 <div className="flex flex-row flex-wrap">{renderSkills()}</div>
@@ -190,7 +190,7 @@ const App = () => {
 
             <div className="mb-4">
               <h2 className="font-bold text-2xl mb-2">Experience</h2>
-              <span className="block h-[4px] w-[40px] bg-orange-600 mb-4" />
+              <span className="block h-[4px] w-[40px] bg-blue-600 mb-4" />
 
               <div className="flex flex-col sm:flex-row sm:flex-wrap">
                 {renderExperience()}
@@ -203,7 +203,7 @@ const App = () => {
 
             <div className="mb-8">
               <h2 className="font-bold text-2xl mb-2">Contact</h2>
-              <span className="block h-[4px] w-[40px] bg-orange-600 mb-4" />
+              <span className="block h-[4px] w-[40px] bg-blue-600 mb-4" />
 
               <div className="flex flex-row flex-nowrap items-center mb-2">
                 <span className="mr-2">
@@ -226,10 +226,10 @@ const App = () => {
 
             <div className="mb-8">
               <h2 className="font-bold text-2xl mb-2">Resume</h2>
-              <span className="block h-[4px] w-[40px] bg-orange-600 mb-4" />
+              <span className="block h-[4px] w-[40px] bg-blue-600 mb-4" />
 
               <a
-                className="block w-[160px] px-2 py-1 rounded text-center bg-orange-600 text-white"
+                className="block w-[160px] px-2 py-1 rounded text-center bg-blue-600 text-white"
                 href="https://drive.google.com/file/d/1S84O6ylWZGF4MEpCEBQFkLL2Z8LFgb4Z/view?usp=drive_link"
                 title="Download"
                 rel="noreferrer noopener"
