@@ -37,7 +37,7 @@ const App = () => {
       name: "Ushur",
       logo: ushurLogo,
       designation: "Lead UI Developer",
-      experience: "1.5+ years",
+      experience: "2.5+ years",
       url: "https://ushur.com",
     },
     {
@@ -163,7 +163,7 @@ const App = () => {
 
               <p>
                 I live in Bangalore, India working full time as a JavaScript
-                developer. I've been building stuff on the web for the last 10
+                developer. I've been building stuff on the web for the last 12
                 years, working with multiple organizations. I like to code
                 things from scratch, and enjoy bringing ideas to life in the
                 browser. I absolutely love learning new things and taking on new
@@ -230,7 +230,7 @@ const App = () => {
 
               <a
                 className="block w-[160px] px-2 py-1 rounded text-center bg-orange-600 text-white"
-                href="https://drive.google.com/file/d/1CGLmhCj-tmQUo4YeNOCINWBlxTjsXI5e/view?usp=sharing"
+                href="https://drive.google.com/file/d/1S84O6ylWZGF4MEpCEBQFkLL2Z8LFgb4Z/view?usp=drive_link"
                 title="Download"
                 rel="noreferrer noopener"
                 target="_blank"
