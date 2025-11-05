@@ -213,25 +213,6 @@ const App = () => {
                 <span>naveenakadaba@gmail.com</span>
               </div>
             </div>
-
-            <div className="mb-8">
-              <Divider />
-            </div>
-
-            <div className="mb-8">
-              <h2 className="font-bold text-2xl mb-2">Resume</h2>
-              <span className="block h-[4px] w-[40px] bg-blue-600 mb-4" />
-
-              <a
-                className="block w-[160px] px-2 py-1 rounded text-center bg-blue-600 text-white"
-                href="https://drive.google.com/file/d/1S84O6ylWZGF4MEpCEBQFkLL2Z8LFgb4Z/view?usp=drive_link"
-                title="Download"
-                rel="noreferrer noopener"
-                target="_blank"
-              >
-                Download
-              </a>
-            </div>
           </div>
         </div>
       </Container>
