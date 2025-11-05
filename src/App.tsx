@@ -36,36 +36,31 @@ const App = () => {
     {
       name: "Ushur",
       logo: ushurLogo,
-      designation: "Lead UI Developer",
-      experience: "2.5+ years",
+      designation: "Principal Engineer",
       url: "https://ushur.com",
     },
     {
       name: "Tesco",
       logo: tescoLogo,
       designation: "SDE2",
-      experience: "3.5+ years",
       url: "https://tesco.com",
     },
     {
       name: "Swiggy",
       logo: swiggyLogo,
       designation: "UI Engineer 2",
-      experience: "1.5+ years",
       url: "https://swiggy.com",
     },
     {
       name: "Coviam",
       logo: coviamLogo,
       designation: "Lead Engineer",
-      experience: "Less than a year",
       url: "https://coviam.com",
     },
     {
       name: "Mapplinks",
       logo: mapplinksLogo,
       designation: "Senior Web Developer",
-      experience: "1.5+ years",
       url: "https://mapplinks.com",
     },
   ]);
@@ -99,7 +94,6 @@ const App = () => {
 
         <h3 className="font-bold mb-2">{org.name}</h3>
         <p className="text-sm mb-2">{org.designation}</p>
-        <p className="text-sm text-gray-500">{org.experience}</p>
       </div>
     ));
   };
